@@ -2,130 +2,90 @@
 <html>
 	<head>
 		<title>Augmented Reality</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 	<style>
 		body {
 			text-align: center;
 		}
 
-		/*
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: orange;
+		div.title {
+			position: relative;
+			-webkit-animation-name: titleentrance;
+			animation-name: titleentrance;
+			animation-duration: 1.5s;
 		}
 
-		li {
-			float:left;
-		}
-
-		li a {
-			text-decoration: none;
-			font-family: SF UI Display;
-			font-size: 24px;
-			display: block;
-			padding: 12px;
-		}
-		*/
-
-		/* Safari 4.0-8.0*/
-		@-webkit-keyframes entrance {
+		/* Safari 4.0-8.0 */
+		@-webkit-keyframes titleentrance {
 			0% {top: -300px; opacity: 0;}
 			100% {top: 0px; opacity: 1;}
 		}
 
 		/* Standard syntax */
-		@keyframes entrance {
+		@keyframes titleentrance {
 			0% {top: -300px; opacity: 0;}
 			100% {top: 0px; opacity: 1;}
 		}
 
-		div.title {
+		div.title h1 {
+			font-family: SF UI Display;
+			font-size: 48px;
+			letter-spacing: 10px;
+		}
+
+		div.subtitle {
 			position: relative;
-			font-family: Candara;
-			font-weight: bold;
-			-webkit-animation-name: entrance;
-			animation-name: entrance;
+			-webkit-animation-name: subentrance;
+			animation-name: subentrance;
 			animation-duration: 2s;
 		}
 
-		div.title h1 span:nth-child(1) {animation-delay: .4s;}
-		div.title h1 span:nth-child(2) {animation-delay: .8s;}
-		div.title h1 span:nth-child(3) {animation-delay: 1.2s;}
-		div.title h1 span:nth-child(4) {animation-delay: 1.6s;}
-		div.title h1 span:nth-child(5) {animation-delay: 2s;}
-		div.title h1 span:nth-child(6) {animation-delay: 2.4s;}
-		div.title h1 span:nth-child(7) {animation-delay: 2.8s;}
-		div.title h1 span:nth-child(8) {animation-delay: 3.2s;}
-		div.title h1 span:nth-child(9) {animation-delay: 3.6s;}
-		div.title h1 span:nth-child(11) {animation-delay: 4s;}
-		div.title h1 span:nth-child(12) {animation-delay: 4.4s;}
-		div.title h1 span:nth-child(13) {animation-delay: 4.8s;}
-		div.title h1 span:nth-child(14) {animation-delay: 5.2s;}
-		div.title h1 span:nth-child(15) {animation-delay: 5.6s;}
-		div.title h1 span:nth-child(16) {animation-delay: 6s;}
-		div.title h1 span:nth-child(17) {animation-delay: 6.4s;}
+		/* Safari 4.0-8.0 */
+		@-webkit-keyframes subentrance {
+			0% {top: 200px; opacity: 0;}
+			100% {top: 0px; opacity: 1;}
+		}
 
-		div.navigation {
-			position: fixed;	
-			z-index: 2;
+		@keyframes subentrance {
+			0% {top: 200px; opacity: 0;}
+			100% {top: 0px; opacity: 1; !important}
+		}
+
+		div.subtitle h2 {
 			font-family: SF UI Display;
-			text-align: left;
-			font-size: 24px;
-			letter-spacing: 1px;
-			color: red;
-			width: 100%;
-			height: 
-			padding: 0;
-			background-color: orange;
-		}
-
-		div.navigation a {
-			text-decoration-line: none;
-			padding: 20px 20px 9px 15px !important;
-		}
-
-		div.navigation a:link {
-			color: blue;
-		}
-
-		div.navigation a:hover {
-			color: red;
+			font-size: 36px;
+			letter-spacing: 4px;
 		}
 
 		div.textcontent {
 			font-family: Ebrima;
 		}
 
-		nav {
-			background-color: orange;
+		#textcontent1 {
+			background-color: black;
+			width: 100%;
+			color: white;
+		}
+
+		#textcontent2 {
+			background-color: white;
+			width: 100%;
+			color: black;
 		}
 
 		p {
-			font-size: 16px;
-			text-align: justify;
-		}
-
-		p.dummy {
 			font-size: 24px;
-			visibility: hidden;
+			text-align: justify;
 		}
 	</style>
 	<body>
-		<div class="navigation">
-			<nav>
-				<a href="https://www.facebook.com/richard.greenholic">Facebook</a>
-			</nav>
-		</div>
-		<p class="dummy">Dummy purposes only</p>
 		<div class="title">
 			<h1>AUGMENTED REALITY</h1>
 		</div>
-		<div class="textcontent">
+		<div class="subtitle">
+			<h2>Microsoft HoloLens</h2>
+		</div>
+		<div class="textcontent" id="textcontent1">
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
@@ -137,6 +97,8 @@
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
+		</div>
+		<div class="textcontent" id="textcontent2">
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
 			<p> Halo semuanya, nama saya Ferdinandus Richard dari IF ITB 2015. </p>
